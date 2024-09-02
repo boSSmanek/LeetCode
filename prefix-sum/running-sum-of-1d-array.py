@@ -1,13 +1,13 @@
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        '''result = []
+        result = []
         su = 0
 
         for i in range(len(nums)):
             su += nums[i]
             result.append(su)
         
-        return result'''
-        
+        return result
+
         # one-liner
-        return list(accumulate(nums))
+        #return list(accumulate(nums))
