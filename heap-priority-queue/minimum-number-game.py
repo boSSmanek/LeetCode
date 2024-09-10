@@ -1,17 +1,11 @@
 class Solution:
     def numberGame(self, nums: List[int]) -> List[int]:
-        result = []
-        while len(nums) > 1:
-            a = min(nums)
-            nums.remove(a)
+        nums.sort()
 
-            b = min(nums)
-            nums.remove(b)
+        i = 0
 
-            result.append(b)
-            result.append(a)
+        while (i < len(nums)):
+            nums[i], nums[i + 1] = nums[i + 1], nums[i]
+            i += 2
 
-        if nums:
-            result.append(nums[0])
-
-        return result
+        return nums
