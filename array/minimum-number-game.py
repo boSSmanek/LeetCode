@@ -1,7 +1,7 @@
 class Solution:
     def numberGame(self, nums: List[int]) -> List[int]:
         result = []
-        for n in nums:
+        while len(nums) > 1:
             a = min(nums)
             nums.remove(a)
 
@@ -10,5 +10,8 @@ class Solution:
 
             result.append(b)
             result.append(a)
+
+        if nums:
+            result.append(nums[0])
 
         return result
