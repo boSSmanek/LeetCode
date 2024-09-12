@@ -6,5 +6,6 @@ class Solution:
             for c in w:
                 if c not in allowed:
                     count += 1
+                    break
                 
         return len(words) - count
